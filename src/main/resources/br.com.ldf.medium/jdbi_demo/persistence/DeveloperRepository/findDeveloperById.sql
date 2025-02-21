@@ -1,1 +1,0 @@
-"SELECT * FROM developer WHERE developer_id = :developerId"
