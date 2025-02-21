@@ -7,3 +7,5 @@ spring:
     url: jdbc:postgresql://localhost:9432/postgres
     username: ad-adm-local
     password: ad-adm-local
+  jpa:
+    show-sql: true

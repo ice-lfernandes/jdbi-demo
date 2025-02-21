@@ -23,7 +23,7 @@ public class DeveloperService {
     }
 
     public Developer findDeveloperById(Long developerId) {
-        return developerRepository.findDeveloperById(developerId)
+        return developerRepository.findById(developerId)
                 .orElseThrow(() -> new RuntimeException("Developer not found"));
     }
 

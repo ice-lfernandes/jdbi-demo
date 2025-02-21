@@ -1,14 +1,17 @@
 package br.com.ldf.medium.jdbi_demo.domain;
 
-import lombok.*;
-import org.jdbi.v3.core.mapper.reflect.JdbiConstructor;
+import lombok.Getter;
+import org.jdbi.v3.core.mapper.reflect.ColumnName;
 
 @Getter
-@AllArgsConstructor(onConstructor_ = @JdbiConstructor)
 public class Developer {
 
-    private Long developerId;
-    @NonNull
-    private String name;
+    private final Long id;
+    private final String name;
 
+    public Developer(@ColumnName("id_developer") Long id,
+                     String name) {
+        this.id = id;
+        this.name = name;
+    }
 }
